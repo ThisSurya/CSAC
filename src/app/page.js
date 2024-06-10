@@ -1,10 +1,15 @@
 "use client"
 import { useRef } from "react"
-// Import Swiper React components
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 export default function beranda() {
     const list = useRef(null);
@@ -59,12 +64,15 @@ export default function beranda() {
             <h1 className="text-center">Feature Search</h1>
 
             <Swiper
+                // install Swiper modules
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
                 slidesPerView={3}
-                onSlideChange={() => console.log('slide change')}
+                navigation
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
-                navigation={true}
-                pagination={true}
+                onSlideChange={() => console.log('slide change')}
             >
                 <SwiperSlide>Slide 1</SwiperSlide>
                 <SwiperSlide>Slide 2</SwiperSlide>
