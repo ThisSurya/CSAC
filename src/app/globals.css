@@ -33,6 +33,27 @@
 }
 
 .swiper {
-  width: 600px;
-  height: 300px;
+  width: 80%;
+  height: 450px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: #1e3a8a !important;
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled{
+  opacity: 0 !important;
+}
+
+.swiper-pagination-bullet-active{
+  color: #1e3a8a !important;
+}
+
+.swiper-pagination-bullet{
+  color: white !important;
+}
+
+.button-prev {
+  width: 100%;
 }
